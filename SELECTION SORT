@@ -1,0 +1,26 @@
+## iterative method
+
+n=8
+lis=[1,-1,3,2,4,9,7,8]
+for i in range(n):
+    minnum=i
+    for j in range(i+1,n):
+        if lis[j]<lis[minnum]:
+            minnum=j
+    lis[i],lis[minnum]=lis[minnum],lis[i]
+print(lis)
+
+
+## using functions
+
+def selectionsort(lis):
+    for i in range(n):
+        minnum=i
+        for j in range(i+1,n):
+            if lis[j]<lis[minnum]:
+                minnum=j
+        lis[i],lis[minnum]=lis[minnum],lis[i]
+    return lis
+n=8
+lis=[1,4,3,2,4,9,7,8]
+print(selectionsort(lis))
